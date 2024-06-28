@@ -7,5 +7,5 @@
   cursor: pointer;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #ebbad2);
+  filter: drop-shadow(0 0 2em #00a86b);
 }
