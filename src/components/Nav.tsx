@@ -2,11 +2,11 @@ const navItems = ["When", "Where", "Who", "How"];
 
 // m-5 text-2xl
 
-type NavProps = {
+export type ThemeProps = {
   dark: boolean;
 };
 
-const Nav = ({ dark }: NavProps) => {
+const Nav = ({ dark }: ThemeProps) => {
   return (
     <nav className="flex flex-row">
       {navItems.map((item) => (

@@ -4,6 +4,7 @@ import logo from "/jandm.png";
 
 import "../App.css";
 import Nav from "./Nav";
+import Button from "./Button";
 
 const Landing = () => {
   const [darkMode, setDarkMode] = useState(true);
@@ -37,6 +38,7 @@ const Landing = () => {
           </span>
         </section>
         <Nav dark={darkMode} />
+        <Button dark={darkMode} />
       </main>
     </>
   );
