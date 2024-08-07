@@ -13,7 +13,7 @@ export default {
       },
     },
     colors: {
-      green: "#00a86b", // custom pink
+      green: "#00a86b", // custom green
     },
   },
   variants: {
