@@ -41,7 +41,7 @@ const Landing = () => {
           </span>
         </section>
         <Nav dark={darkMode} />
-        <Button dark={darkMode} />
+        <Button dark={darkMode} toggleDarkMode={toggleDarkMode} />
       </main>
     </>
   );
