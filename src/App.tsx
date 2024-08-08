@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import { When, Where, Who, How } from "./pages";
+import { When, Where, Who, How, RSVP } from "./pages";
 import Landing from "./components/Landing";
 import { ThemeProvider } from "./context/ThemeContext";
 
@@ -16,6 +16,7 @@ function App() {
           <Route path="/where" element={<Where />} />
           <Route path="/who" element={<Who />} />
           <Route path="/how" element={<How />} />
+          <Route path="/rsvp" element={<RSVP />} />
         </Routes>
       </Router>
     </ThemeProvider>

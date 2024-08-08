@@ -14,7 +14,7 @@ const ContainerContent = ({ children }: ContainerProps) => {
       <main
         className={`h-screen w-screen ${
           darkMode ? "bg-green" : "bg-light opacity-75"
-        } flex flex-col items-center justify-start`}
+        } flex flex-col items-center justify-start overflow-auto`}
       >
         <img src={logo} className="logo" alt="Logo" onClick={toggleDarkMode} />
         <section

@@ -1,13 +1,20 @@
+import { useNavigate } from "react-router-dom";
+
 import { ThemeProps } from "./Nav";
 
-const buttonStylesBase =
+export const buttonStylesBase =
   "px-6 py-3 my-10 text-white font-semibold rounded-lg shadow-md transition duration-300 ease-in-out transform hover:scale-105";
-const buttonStylesLight = "bg-green";
-const buttonStylesDark = "bg-light text-green";
+export const buttonStylesLight = "bg-green";
+export const buttonStylesDark = "bg-light text-green";
 
 const Button = ({ dark }: ThemeProps) => {
+  const navigate = useNavigate();
+
   return (
     <button
+      onClick={() => {
+        navigate("/rsvp");
+      }}
       className={`${
         dark ? buttonStylesDark : buttonStylesLight
       } ${buttonStylesBase}`}
