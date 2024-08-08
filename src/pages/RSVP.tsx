@@ -11,7 +11,16 @@ import { useTheme } from "../context/ThemeContext";
 const RSVP = () => {
   const { darkMode, toggleDarkMode } = useTheme();
 
-  const inputStyles = "my-3 rounded text-xs p-3 w-full bg-light";
+  const inputStyles = "my-3 rounded text-xs p-3 w-full bg-light text-green";
+
+  const initialValues = {
+    fName: "",
+    lName: "",
+    email: "",
+    attending: "",
+    names: "",
+    diet: "",
+  };
 
   return (
     <div>
@@ -21,8 +30,14 @@ const RSVP = () => {
           <p className="text-sm mb-7">
             Please confirm your attendance by January 31st, 2025
           </p>
-          <Formik>
-            {() => (
+          <Formik
+            initialValues={initialValues}
+            onSubmit={async (values) => {
+              const userSubmission = JSON.stringify(values, null, 2);
+              console.log(userSubmission);
+            }}
+          >
+            {({ isSubmitting }) => (
               <Form className="flex flex-col">
                 <div className="flex">
                   <div className="flex-row w-full text-start  mr-1 p-0">
@@ -119,6 +134,7 @@ const RSVP = () => {
                     darkMode ? buttonStylesDark : buttonStylesLight
                   } ${buttonStylesBase} w-full`}
                   type="submit"
+                  disabled={isSubmitting}
                 >
                   Submit
                 </button>
