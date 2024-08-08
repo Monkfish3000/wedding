@@ -102,6 +102,18 @@ const RSVP = () => {
                   />
                 </div>
 
+                <div className="flex-row w-full text-start ml-0 p-0">
+                  <label className="text-sm" htmlFor="diet">
+                    Do you have any special dietry requirements?
+                  </label>
+                  <Field
+                    className={`${inputStyles} w-full`}
+                    type="text"
+                    name="diet"
+                    placeholder="Please write them here if so"
+                  />
+                </div>
+
                 <button
                   className={`${
                     darkMode ? buttonStylesDark : buttonStylesLight
@@ -113,6 +125,10 @@ const RSVP = () => {
               </Form>
             )}
           </Formik>
+          <p className="mt-7 border-t-2 title m-6 text-8xl">
+            We cannot wait to celebrate with you!
+            <br />♡
+          </p>
         </section>
       </Container>
     </div>
